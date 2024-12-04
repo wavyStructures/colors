@@ -1,1 +1,11 @@
-<p>adventskalender works!</p>
+<div class="calendar-wrapper">
+    <div class="calender-grid">
+        <!-- <div *ngFor="let door of doors; let i = index" class="calendar-door" [ngClass]="{'open': door.opened, 'today': door.day === today}"> -->
+        <div *ngFor="let door of doors; let i = index" class="calendar-door">
+            <div class="calendar-door-inner" (click)="openDoor(door, i)">
+                <div class="calendar-door-number">{{door.day}}</div>
+                <div class="calendar-door-content">{{door.content}}</div>
+            </div>
+        </div>
+    </div>
+</div>
